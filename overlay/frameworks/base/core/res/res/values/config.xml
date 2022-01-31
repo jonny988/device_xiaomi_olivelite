@@ -493,9 +493,6 @@
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">pool.ntp.org</string>
 
-    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
-    <bool name="config_zramWriteback">true</bool>
-
     <!-- True if the device supports Sustained Performance Mode -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
@@ -532,6 +529,11 @@
             2 - Global actions menu
     -->
     <integer name="config_keyChordPowerVolumeUp">1</integer>
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
@@ -576,14 +578,30 @@
     <!-- Whether this device is supporting the microphone toggle -->
     <bool name="config_supportsMicToggle">true</bool>
 
-    <!-- Whether this device is supporting the camera toggle -->
-    <bool name="config_supportsCamToggle">true</bool>  
+    <!-- Controls the navigation bar interaction mode:
+         0: 3 button mode (back, home, overview buttons)
+         1: 2 button mode (back, home buttons + swipe up for overview)
+         2: gestures only for back, home and overview -->
+    <integer name="config_navBarInteractionMode">2</integer>
+
+     <!-- FPSInfoService FPS node file path -->
+    <string name="config_fpsInfoSysNode" translatable="false">/sys/devices/virtual/graphics/fb0/measured_fps</string>
+
+     <!-- the number of the max cached processes in the system. -->
+    <integer name="config_customizedMaxCachedProcesses">64</integer>
+
+     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>  
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
     
     <!-- Disable rounded corners on windows to improve graphics performance -->
     <bool name="config_supportsRoundedCornersOnWindows">true</bool>
+
+    <!-- Whether device needs to wait for Qualcomm MPCTL service to start
+         before setting power profiles on boot. -->
+    <bool name="config_waitForMpctlOnBoot">true</bool>    
 
     <string name="config_mainBuiltInDisplayCutout">M-59,13.521603 C-51.3411734,20.2116468 -45.8262261,25.5003131 -42.4551581,29.3876018 C-37.4060696,35.2110207 -32.5523328,41.2298059 -26.3762157,45.6443331 C-22.5105074,48.4020038 -18.1301226,50.536005 -13.5506295,51.9524108 C-9.15897443,53.3087038 -4.57948127,55 1.18885336e-05,55 C4.57574829,55 9.14772792,53.3087038 13.539383,51.9524108 C18.1263897,50.536005 22.5067744,48.4020038 26.3649692,45.6443331 C32.5523566,41.2298059 37.4060934,35.2110207 42.4551819,29.3876018 C45.8237453,25.5003131 51.3386847,20.2116468 59,13.521603 L59,0 L-59,0 L-59,13.521603 Z</string>
 </resources>
