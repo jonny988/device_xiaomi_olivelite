@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2021 The CrDroidOS Project
+# Copyright (C) 2021 The AwakendOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_olivelite.mk
+    $(LOCAL_DIR)/awaken_olivelite.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_olivelite-user \
-    lineage_olivelite-userdebug \
-    lineage_olivelite-eng
+    awaken_olivelite-user \
+    awaken_olivelite-userdebug \
+    awaken_olivelite-eng
