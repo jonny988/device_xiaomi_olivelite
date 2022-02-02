@@ -487,9 +487,6 @@
     <!-- The max scale for the wallpaper when it's zoomed in -->
     <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
 
-    <!-- Whether the device show_vendor_mismatch_message -->
-    <bool name="config_show_vendor_mismatch_message">false</bool>
-
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">pool.ntp.org</string>
 
