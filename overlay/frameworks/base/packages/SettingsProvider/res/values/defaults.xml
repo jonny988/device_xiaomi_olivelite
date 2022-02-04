@@ -17,7 +17,6 @@
  */
 -->
 <resources>
-
     <!-- Lower Animation Scale Durations  -->
     <fraction name="def_window_animation_scale">50%</fraction>
     <fraction name="def_window_transition_scale">50%</fraction>
@@ -30,5 +29,4 @@
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
     <string name="def_device_name_simple">Redmi 8A</string>
-
 </resources>
